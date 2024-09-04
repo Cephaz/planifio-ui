@@ -1,9 +1,15 @@
-import './App.css';
+import {Provider} from 'react-redux';
+import {store} from './store';
+import Login from './pages/Login';
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Provider store={store}>
+        <div className="App">
+          <Login />
+        </div>
+      </Provider>
     </>
   );
 }
